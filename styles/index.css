@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+:root{
+    --primary-color: black;
+    --secundary-color: white;
+}
+
+body{
+    background: var(--secundary-color);
+    color: var(--primary-color);
+}
+
+.darkmode{
+    --primary-color: white;
+    --secundary-color: black;
+}
+
+.hide{
+    display: none;
+}
+
+/* navbar style */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
+
+nav .enlaces{
+    margin-left: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    padding-right: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: start;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.dark-botton{
+    width: 30px;
+    height: 30px;
+    padding-right: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+
+/* head style */
+
+.head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px);
+    background-image: url("../img/alabanza.gif");
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.head .casa-firme{
+    font-size: 240px;
+    font-weight: 900;
+}
+
+.head .iglesia-cristiana{
+    font-size: 120px;
+    letter-spacing: 25px;
+    margin-top: -130px;
+    margin-left: 30px;
+}
+
+
+/* Horarios style */
+
+.horarios{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.container-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+.horarios .slider{
+    height: 50%;
+    width: 600px;
+    overflow: hidden;
+}
+
+.horarios .slider ul{
+    display: flex;
+    align-items: center;
+    animation: cambio 12s infinite alternate linear;
+    width: 400%;
+}
+
+.horarios .slider ul li{
+    width: 100%;
+    list-style: none;
+}
+
+.horarios .slider ul li img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+.horarios .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1500px) {
+    .head .casa-firme{
+        font-size: 180px;
+        font-weight: 900;
+    }
+    
+    .head .iglesia-cristiana{
+        font-size: 70px;
+        font-weight: 900;
+        letter-spacing: 28px;
+        margin-top: -90px;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .head .casa-firme{
+        font-size: 120px;
+        font-weight: 900;
+    }
+    
+    .head .iglesia-cristiana{
+        font-size: 30px;
+        font-weight: 900;
+        letter-spacing: 28px;
+        margin-top: -50px;
+        margin-left: 30px;
+    }
+
+    .horarios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-slider{
+        height: 50%;
+        width: 100%;
+    }
+
+    .horarios .slider{
+        height: 100%;
+        width: 500px;
+        padding-top: 50px;
+    }
+    
+    .horarios .slider ul li{
+        width: 100%;
+        list-style: none;
+    }
+    
+
+
+    .horarios .info{
+        height: 50%;
+    }
+
+
+
+
+}
+
+@media (max-width: 800px) {
+    .head .casa-firme{
+        font-size: 100px;
+        font-weight: 900;
+    }
+    
+    .head .iglesia-cristiana{
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 28px;
+        margin-top: -35px;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 630px) {
+
+    nav{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--secundary-color);
+        align-items: center;
+        justify-content: center;
+        transition: all .3s;
+    }
+
+    nav.open{
+        left: 0;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li{
+        margin-bottom: 20px;
+    }
+
+    nav ul li a{
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .dark-botton{
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        background-color: var(--primary-color);
+    }
+
+
+    .head{
+        height: 100hv;
+    }
+
+
+
+    .head .casa-firme{
+        display: flex;
+        flex-direction: column;
+        font-size: 110px;
+    }
+
+    .head .casa-firme .casa{
+        letter-spacing: 6px;
+    }
+
+    .head .casa-firme .firme{
+        margin-top: -70px;
+    }
+    
+    .head .iglesia-cristiana{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+        letter-spacing: 20px;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+
+    .head .iglesia-cristiana .cristiana{
+        margin-top: -10px;
+    }
+
+
+    .horarios .slider{
+        height: 100%;
+        width: 320px;
+        padding-top: 120px;
+    }
+
+    .horarios .info h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .horarios .info ul{
+        width: 70%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+
+    /* responsive menu */
+
+    .hamburger-menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        right: 20px;
+        top: 30px;
+        height: 30px;
+        width: 35px;
+
+    }
+
+
+    .hamburger-menu div{
+        background-color: var(--primary-color);
+        height: 5px;
+        border-radius: 2px;
+        width: 100%;
+        transform-origin: 0 100%;
+        transition: all .3s;
+    }
+
+    .hamburger-menu .mid-line.hide{
+        display: none;
+    }
+
+    .hamburger-menu .top-line.open{
+        transform: rotate(45deg) translate(-2px);
+    }
+
+    .hamburger-menu .botton-line.open{
+        transform: rotate(-45deg) translateX(2px);
+    }
+
+
+
+}
