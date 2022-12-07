@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Casa Firme</title>
+</head>
+<body>
+
+    <div id="agenda-form">
+        <label for="agenda-id">Id</label>
+        <input type="agenda-id" id="agenda-id" placeholder="Ingrese indentificador">
+        <label for="mes">Semana</label>
+        <input type="month" id="mes" class="form-control" placeholder="Ingresar mes">
+        <label for="coodinador">Coordinador</label>
+        <input type="text" id="coordinador" placeholder="Ingrese Coordinador">
+        <label for="alabanza">Alabanza</label>
+        <input type="text" id="alabanza" placeholder="Ingrese Director de Alabanza">
+        <label for="maestro">maestro</label>
+        <input type="text" id="maestro" placeholder="Ingrese Maestro">
+        <label for="ujier">Ujier</label>
+        <input type="text" id="ujier" placeholder="Ingrese Encargado de Ujier">
+
+        <button id="btn-agregar">Agregar</button>
+    </div>
+
+    <div class="tarjeta-agenda" id="tarjeta-agenda">
+        <h2>Publicar agenda</h2>
+        <input type="text" id="agenda-id-show" placeholder="Ingrese Id de Agenda">
+        <button id="btn-publicar">Publicar</button>
+
+        <div class="mes">Mes: <span id="mes-show"></span></div>
+        <div class="coordinador">Coordinador:<span id="coordinador-show"></span></div>
+        <div class="alabanza">Director Alabanza:<span id="alabanza-show"></span></div>
+        <div class="ujier">Ujier: <span id="ujier-show"></span></div>
+        <div class="maestro">Maestro: <span id="maestro-show"></span></div>
+    </div>
+
+    
+
+
+
+
+    <script type="module" src="./javascript/firebase.js"></script>
+</body>
+</html>
