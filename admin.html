@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <div id="agenda-form">
-        <label for="agenda-id">Id</label>
-        <input type="agenda-id" id="agenda-id" placeholder="Ingrese indentificador">
-        <label for="mes">Semana</label>
+    <a href="agenda.html">Regresar a agenda</a>
+
+    <form id="agenda-form">
+        <label for="mes">Mes</label>
         <input type="month" id="mes" class="form-control" placeholder="Ingresar mes">
         <label for="coodinador">Coordinador</label>
         <input type="text" id="coordinador" placeholder="Ingrese Coordinador">
@@ -23,25 +23,15 @@
         <input type="text" id="ujier" placeholder="Ingrese Encargado de Ujier">
 
         <button id="btn-agregar">Agregar</button>
-    </div>
+    </form>
 
-    <div class="tarjeta-agenda" id="tarjeta-agenda">
-        <h2>Publicar agenda</h2>
-        <input type="text" id="agenda-id-show" placeholder="Ingrese Id de Agenda">
-        <button id="btn-publicar">Publicar</button>
 
-        <div class="mes">Mes: <span id="mes-show"></span></div>
-        <div class="coordinador">Coordinador:<span id="coordinador-show"></span></div>
-        <div class="alabanza">Director Alabanza:<span id="alabanza-show"></span></div>
-        <div class="ujier">Ujier: <span id="ujier-show"></span></div>
-        <div class="maestro">Maestro: <span id="maestro-show"></span></div>
-    </div>
-
-    
+    <div class="agenda-container-admin" id="agenda-container-admin"></div>
 
 
 
 
     <script type="module" src="./javascript/firebase.js"></script>
+    <script type="module" src="./javascript/agenda.js"></script>
 </body>
 </html>
