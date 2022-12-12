@@ -39,7 +39,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 40px;
+    height: 180px;
 }
 
 nav .enlaces{
@@ -55,14 +55,20 @@ nav ul li{
     padding-right: 30px;
 }
 
-nav a{
+nav .enlaces a{
     text-decoration: none;
     color: var(--primary-color);
     display: flex;
     justify-content: start;
     font-size: 20px;
-    font-weight: 600;
+    color: #453C67;
 }
+
+nav .enlaces a:hover{
+    font-weight: 600;
+    border-bottom: 4px solid #F2F7A1;
+}
+
 
 .dark-botton{
     width: 30px;
@@ -80,8 +86,8 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 40px);
-    background-image: url("../img/alabanza.gif");
+    height: calc(100vh - 180px);
+    background: url("../img/alabanza.gif");
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,7 +112,9 @@ nav a{
     display: flex;
     height: 100vh;
     width: 100%;
-    background-color: rgb(224, 224, 224);
+    background: rgb(109,103,228);
+    background: linear-gradient(90deg, rgba(109,103,228,1) 0%, rgba(69,60,103,1) 80%);
+    color: white;
 }
 
 .container-slider{
@@ -160,6 +168,16 @@ nav a{
     justify-content: center;
     align-items: center;
 }
+
+
+.horarios .info h2{
+    color: white;
+}
+
+.horarios .info h3{
+    color: #46C2CB;
+}
+
 
 @media (max-width: 1500px) {
     .head .casa-firme{
@@ -246,9 +264,14 @@ nav a{
         width: 100%;
         height: 100%;
         background: var(--secundary-color);
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: all .3s;
+    }
+
+    nav .logo{
+        width: 70%;
     }
 
     nav.open{
