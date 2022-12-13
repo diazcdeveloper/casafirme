@@ -33,13 +33,87 @@ body{
     display: none;
 }
 
+/* modal de bienvenida */
+
+.modal-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(69,60,103,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.hide{
+    display: none;
+}
+
+.modal-container .modal{
+    background-color: white;
+    width: 700px;
+    position: relative;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 20px 10px #453C67;
+}
+
+.modal-container .modal .closed-modal{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    color: #453C67;
+}
+
+
+.modal-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.modal-content p{
+    color: #a9a4bb;
+    width: 50%;
+}
+
+.modal-content p span{
+    color: #6D67E4;
+}
+
+.modal-content .titulo{
+    width: 50%;
+}
+
+.modal-content .titulo h3{
+    color: #453C67;
+    font-size: 30px;
+    text-align: center;
+}
+
+.modal-content .titulo .casa-firme{
+    color: #6D67E4;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.modal-content .titulo .firme{
+    margin-top: -30px;
+}
+
+
 /* navbar style */
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 40px;
+    height: 180px;
 }
 
 nav .enlaces{
@@ -55,22 +129,19 @@ nav ul li{
     padding-right: 30px;
 }
 
-nav a{
+nav .enlaces a{
     text-decoration: none;
-    color: var(--primary-color);
     display: flex;
-    justify-content: start;
+    /* justify-content: start; */
     font-size: 20px;
-    font-weight: 600;
+    color: #453C67;
 }
 
-.dark-botton{
-    width: 30px;
-    height: 30px;
-    padding-right: 30px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
+nav .enlaces a:hover{
+    font-weight: 600;
+    border-bottom: 4px solid #F2F7A1;
 }
+
 
 
 /* head style */
@@ -80,8 +151,8 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 40px);
-    background-image: url("../img/alabanza.gif");
+    height: calc(100vh - 180px);
+    background: url("../img/alabanza.gif");
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -106,6 +177,9 @@ nav a{
     display: flex;
     height: 100vh;
     width: 100%;
+    background: rgb(109,103,228);
+    background: linear-gradient(90deg, rgba(109,103,228,1) 0%, rgba(69,60,103,1) 80%);
+    color: white;
 }
 
 .container-slider{
@@ -159,6 +233,16 @@ nav a{
     justify-content: center;
     align-items: center;
 }
+
+
+.horarios .info h2{
+    color: white;
+}
+
+.horarios .info h3{
+    color: #46C2CB;
+}
+
 
 @media (max-width: 1500px) {
     .head .casa-firme{
@@ -221,22 +305,8 @@ nav a{
 
 }
 
-@media (max-width: 800px) {
-    .head .casa-firme{
-        font-size: 100px;
-        font-weight: 900;
-    }
-    
-    .head .iglesia-cristiana{
-        font-size: 15px;
-        font-weight: 900;
-        letter-spacing: 28px;
-        margin-top: -35px;
-        margin-left: 30px;
-    }
-}
 
-@media (max-width: 630px) {
+@media (max-width: 1000px) {
 
     nav{
         position: fixed;
@@ -245,9 +315,23 @@ nav a{
         width: 100%;
         height: 100%;
         background: var(--secundary-color);
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         transition: all .3s;
+    }
+
+    nav .alogo{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .enlaces{
+        margin-left: 0;
+    }
+
+    nav a .logo{
+        width: 70%;
     }
 
     nav.open{
@@ -257,10 +341,11 @@ nav a{
     nav ul{
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     nav ul li{
-        margin-bottom: 20px;
+        padding-right: 0;
     }
 
     nav ul li a{
@@ -268,16 +353,10 @@ nav a{
         font-weight: 800;
     }
 
-    .dark-botton{
-        position: absolute;
-        right: 20px;
-        bottom: 30px;
-        background-color: var(--primary-color);
-    }
 
 
     .head{
-        height: 100hv;
+        height: 100vh;
     }
 
 
@@ -329,7 +408,7 @@ nav a{
     }
 
 
-    /* responsive menu */
+    /* responsive menu hamburger */
 
     .hamburger-menu{
         position: absolute;
@@ -340,7 +419,7 @@ nav a{
         top: 30px;
         height: 30px;
         width: 35px;
-
+        cursor: pointer;
     }
 
 
@@ -366,5 +445,44 @@ nav a{
     }
 
 
+
+    /* modal responsive */
+
+    .modal-container .modal{
+        width: 300px;
+        padding: 30px;
+    }
+
+    .modal-container .modal .closed-modal{
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal-container .modal .modal-content{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .modal-content p{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    
+    .modal-content h3{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .modal-content .titulo{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content .titulo .casa-firme{
+        text-align: center;
+    }
 
 }

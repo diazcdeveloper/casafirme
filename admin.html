@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Casa Firme</title>
+</head>
+<body>
+
+    <a href="agenda.html">Regresar a agenda</a>
+
+    <form id="agenda-form">
+        <label for="mes">Mes</label>
+        <input type="month" id="mes" class="form-control" placeholder="Ingresar mes">
+        <label for="coodinador">Coordinador</label>
+        <input type="text" id="coordinador" placeholder="Ingrese Coordinador">
+        <label for="alabanza">Alabanza</label>
+        <input type="text" id="alabanza" placeholder="Ingrese Director de Alabanza">
+        <label for="maestro">maestro</label>
+        <input type="text" id="maestro" placeholder="Ingrese Maestro">
+        <label for="ujier">Ujier</label>
+        <input type="text" id="ujier" placeholder="Ingrese Encargado de Ujier">
+
+        <button id="btn-agregar">Agregar</button>
+    </form>
+
+
+    <div class="agenda-container-admin" id="agenda-container-admin"></div>
+
+
+
+
+    <script type="module" src="./javascript/firebase.js"></script>
+    <script type="module" src="./javascript/agenda.js"></script>
+</body>
+</html>
