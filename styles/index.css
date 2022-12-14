@@ -57,7 +57,7 @@ body{
     position: relative;
     padding: 50px;
     border-radius: 10px;
-    box-shadow: 10px 20px 10px #453C67;
+    box-shadow: 10px 10px 10px #453C67;
 }
 
 .modal-container .modal .closed-modal{
